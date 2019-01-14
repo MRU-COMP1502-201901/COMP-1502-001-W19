@@ -17,12 +17,26 @@ public class Dog {
 
 
     // instance variables - unique for each *instance* of the class
-    String name;
+    String name = "Fluffy";
     String breed;
     boolean hypoallergenic;
     double weight;
     int age;
     char sex;
+
+    public Dog() {
+	
+
+    }
+
+    public Dog(String name) {
+	this.name = name;
+    }
+
+    // cant do this because method overloading only looks at arg type
+    //    public Dog(String breed) {
+    //	this.breed = breed;
+    //}
 
     // constructors have not return type because they are returning
     // the object to *new*
@@ -33,18 +47,40 @@ public class Dog {
 	       int age,
 	       char sex) {
 
-	name = name;
+	// always refer to an instance variable with 
+	// this.
+	// its a reference to the instance
+	this.name = name;
+	this.breed = breed;
+	this.hypoallergenic = hypo;
+	this.weight = weight;
+	this.age = age;
+	this.sex = sex;
+
+
+    }
+
+    public String toString() {
+	return name + " " + breed + " " + hypoallergenic + " " +
+	    weight + " " + age + " " + sex;
 
     }
 
     public static void main(String[] args) {
 
 	// default constructor isn't generated after a constructor is defined
-	Dog d = new Dog();
+	//	Dog d = new Dog();
+
+	Dog d = new Dog("Smith", "Poodle", true, 11.2, 10, 'm');
+	Dog d1 = new Dog("Terry");
+	Dog d2 = new Dog();
+	System.out.println(d);
+	System.out.println(d1);
+	System.out.println(d2);
 
 	// whenever we say new, we're telling Java to create a reference to
 	// a new Object, a new instance
-	String s1 = new String("");
+	String s1 = new String();
 	String s2 = new String("COMP 1502");
 	String s3 = "I'm weird!";
 	s3 = "Weird's gone now";
