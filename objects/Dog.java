@@ -17,12 +17,24 @@ public class Dog {
 
 
     // instance variables - unique for each *instance* of the class
-    String name = "Fluffy";
-    String breed;
-    boolean hypoallergenic;
-    double weight;
-    int age;
-    char sex;
+    private String name = "Fluffy";
+    private String breed;
+    private boolean hypoallergenic;
+    private double weight;
+    private int age;
+    private char sex;
+
+
+
+    // accessor method
+    public String getName() {
+	return this.name;
+    }
+
+    // mutator method
+    public void setName(String name) {
+	this.name = name;
+    }
 
     public Dog() {
 	
@@ -60,11 +72,12 @@ public class Dog {
 
     }
 
+    @Override
     public String toString() {
 	return name + " " + breed + " " + hypoallergenic + " " +
 	    weight + " " + age + " " + sex;
 
-    }
+	    }
 
     public static void main(String[] args) {
 
