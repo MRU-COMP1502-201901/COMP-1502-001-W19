@@ -27,7 +27,7 @@ Finally check your code back in:
 
 Change to GitHub and look at how your change has been brought in. If you look at the commits you can see what's been added. Any text file can be edited through GitHub's text editor, but usually it will be better to check the files out edit them using your outside tools and then check them back in. We'll test editing a text file using the web interface just to ensure that we can. Edit the the file to say I DID THIS TOO below then click commit at the bottom of the page.
 
-Type *I DID THIS TOO* here:
+Type *I DID THIS TOO* here: I DID THIS TOO
 
 With GitHub it automatically parses markdown language on any text file that ends .md (like this one). If you want to learn to make your documents fancy I suggest [looking up the rules.](https://guides.github.com/features/mastering-markdown/). It's basically a weird cousin to HTML. 
 
