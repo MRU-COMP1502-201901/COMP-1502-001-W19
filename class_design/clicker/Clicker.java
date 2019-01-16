@@ -14,16 +14,18 @@ public class Clicker {
     // constructors
     // what information do we need to start a clicker
     public Clicker() {
-
+	this.count = 0;
     }
 
     public Clicker(int count) {
-	
+	this.count = count;
     }
 
 
     // accessors
     // what information do we need to provide to the outside
+
+
 
     // mutators
     // what changes do we allow the outside world to make on our state
