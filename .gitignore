@@ -19,5 +19,16 @@
 *.tar.gz
 *.rar
 
+# JavaDoc Files #
+*.html
+*.css
+*.js
+package-list
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# -*- mode: gitignore; -*-
+**~
+\#*\#
+
