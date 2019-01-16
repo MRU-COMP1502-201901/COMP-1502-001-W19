@@ -24,7 +24,9 @@ public class Clicker {
 
     // accessors
     // what information do we need to provide to the outside
-
+    public int getCount() {
+	return count;
+    }
 
 
     // mutators
