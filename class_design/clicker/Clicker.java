@@ -38,6 +38,33 @@ public class Clicker {
     public void reset() {
 	count = 0;
     }
+
+
+    public static void main(String[] args) {
+
+	// instances each represets a seperate STATE
+	Clicker a = new Clicker();
+	Clicker b = new Clicker();
+	Clicker c = new Clicker(147);
+	
+	System.out.println("a:" + a.getCount());
+	System.out.println("b:" + b.getCount());
+	System.out.println("c:" + c.getCount());
+
+	a.click();
+
+	System.out.println("a:" + a.getCount());
+
+	for (int i = 0; i < 17; i++) {
+	    b.click();
+	}
+	c.reset();
+
+	System.out.println("a:" + a.getCount());
+	System.out.println("b:" + b.getCount());
+	System.out.println("c:" + c.getCount());
+
+    }
    
 
 
