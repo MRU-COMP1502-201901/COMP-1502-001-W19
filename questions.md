@@ -9,5 +9,8 @@ Questions asked in class that we need to learn more about, or maybe that we want
 * How do we avoid the awful menace of vim when committing on the command line?
    * [Change your editor.](https://help.github.com/articles/associating-text-editors-with-git/)
 
+## Installing Eclipse and Java
+* How do we install Java and Eclipse on a Windows Machine? (Also Mac?)
+
 ## Environments
 * How do we configure a prompt on bash?
