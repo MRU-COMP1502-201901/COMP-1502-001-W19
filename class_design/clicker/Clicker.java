@@ -31,7 +31,13 @@ public class Clicker {
 
     // mutators
     // what changes do we allow the outside world to make on our state
+    public void click() {
+	count++;
+    }
 
+    public void reset() {
+	count = 0;
+    }
    
 
 
