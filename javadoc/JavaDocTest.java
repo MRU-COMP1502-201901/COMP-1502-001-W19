@@ -2,6 +2,8 @@
 /**
  *
  * Demonstrates how JavaDoc works and how we use it
+ * For more details take a look at the oracle page -
+ * {@link https://www.oracle.com/technetwork/java/javase/tech/index-137868.html}
  *
  */
 
