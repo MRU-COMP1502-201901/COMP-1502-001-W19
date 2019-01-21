@@ -36,6 +36,11 @@ public class Item {
 	return this.maxStock;
     }
 
+    public double getTotalSales() {
+
+	return this.totalSales;
+    }
+
     public boolean restock(int newItems) {
 	boolean returnValue = true;
 	if (currentStock + newItems > maxStock) {
@@ -59,5 +64,7 @@ public class Item {
 	return true;
 
     }
+
+    
 
 }
