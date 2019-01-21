@@ -8,6 +8,7 @@ public class Item {
     private int currentStock;
     private String id;
     private double price;
+    private double totalSales;
 
     public Item(String id,
 		int maxStock,
@@ -16,6 +17,7 @@ public class Item {
 	this.maxStock = maxStock;
 	this.price = price;
 	this.currentStock = 0;
+	this.totalSales = 0;
     }
 
     public String getID() {
@@ -35,11 +37,27 @@ public class Item {
     }
 
     public boolean restock(int newItems) {
+	boolean returnValue = true;
 	if (currentStock + newItems > maxStock) {
+	    returnValue = false;
+	} else {
+	    this.currentStock += newItems;
+	}
+	return returnValue;
+    }
+
+    public boolean hasStock() {
+	return currentStock > 0;
+    }
+
+    public boolean buyItem() {
+	if (!hasStock()) {
 	    return false;
 	}
-	this.currentStock += newItems;
+	currentStock -= 1;
+	totalSales += price;
 	return true;
+
     }
 
 }
