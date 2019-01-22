@@ -10,6 +10,8 @@ For the first phase, you will be provided with code that will provide a menu for
 
 You will be responsible for creating a `Player` class to encapsulate a player and a `Player List` class to encapsulate a list of players, and for connecting those classes to the menu to provide the functionality.
 
+Please remember to keep the [due dates](duedates.md) in mind.
+
 ## The Classes
 
 ### Player
