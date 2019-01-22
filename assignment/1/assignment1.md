@@ -55,7 +55,7 @@ Your system needs to be able to save a list of players to a file and to be able 
 
 One approach would be to create a constructor that takes a file, then reads that file to populate a the list of players. An alternative would be to read in the list of players in the interface class and pass that list to the Player List class when it is created. (Both are acceptable, in your design document be sure to explain why you chose the approach you chose).
 
-An example player data file has been provided for you, it is roster and stats information taken from the Calgary Inferno, a team in the Canadian Women's Hockey League. 
+An example player data [file](inferno.team) has been provided for you, it is roster and stats information taken from the Calgary Inferno, a team in the Canadian Women's Hockey League. 
    * The data is taken from the CWHL [website](http://www.thecwhl.com/stats/player-stats/1/22?playertype=skater&position=skaters&rookie=no&sort=points&statstype=standard&page=1&league=1), which does not provide a breakdown of player's posiition, so we have provided some "artificial" positions for the forwards. Shots are also not recorded, so each player has been provided a roughly estimated number of shots.
    * The data is comma seperated, with one field for each data item. You can use the following snippit of code to produce an ArrayList of each of the elements in one line 
    ````
