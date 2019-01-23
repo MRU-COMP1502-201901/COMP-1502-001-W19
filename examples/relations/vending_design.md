@@ -25,10 +25,24 @@ The item class also needs accessors for several values including:
 
 ## Payment
 
-The playment class encapsulates how the vending machine receives payment. In this case, the user is simply prompted to enter a dollar amount which is then returned.
+The playment class encapsulates how the vending machine receives payment. In this case, the user is simply prompted to enter a dollar amount which is then returned. The payment class doesn't need any new 
 
 The payment class only has one method:
 
 * `receivePayment` allows someone to enter payment. The user is prompted at the console to enter an amount which is parsed and returned. It returns the payment amount as a decimal number.
+
+## VendingMachine
+
+The vending machine encapsulates the information and behaviour needed to simulate a vending machine. The class holds a list items and a payment system. It allows a user to query for the items, query for prices, and purchace an item. A new Vending Machine starts needs to be given a payment class object, and otherwise starts with no items.
+
+The methods needed for the vending machine are:
+* `addItem` adds a new item to the vending machine. If the item has a unique item code, compaired to all other items currently in the vending machine the item is added, otherwise it is not added. The method returns true if the item could be added and false otherwise.
+* `listAllItems` lists all of the items in the vending machine to the console. Each item is printed with it's code price and stock, one per line.
+* `getItemInfo` lists information about an item, including the code, price, current stock and maximum stock. This method takes an item code to look up, then finds that item and prints its relevent information.
+* `purchaseItem` allows an item to be purchased. This method takes an item code to look up, then finds that item and prints the price to the console, it then calls the payment object to take payment from the user. If the payment is sufficient then it attempts to purchase the item, if the item can be purchased then a message to that effect is printed to the console, otherwise an appropriate error message is printed.
+* `restockItem` allows an item to be restocked. This mathod takes an item code to look up and an amount to restock. It finds the appropriate item and attempts to restock it. It prints whether or not it succeeded to the console.
+* `getTotalSales` returns the total sales for the vending machine. It adds together the total sales of each item in the machine and returns the number as a double.
+* `resetSales` resets the sales of all of the items in the machine. For each item it resets the sales, so the next time `getTotalSales` is called it will return all sales after this point.
+
 
 
