@@ -9,6 +9,9 @@ Questions asked in class that we need to learn more about, or maybe that we want
 * How do we avoid the awful menace of vim when committing on the command line?
    * [Change your editor.](https://help.github.com/articles/associating-text-editors-with-git/)
 
+## repl.it
+* Is it possible to restart a replit once we've started one?
+
 ## Installing Eclipse and Java
 * How do we install Java and Eclipse on a Windows Machine? (Also Mac?)
 
