@@ -1,5 +1,4 @@
 
-
 public class Item {
 
 
@@ -18,6 +17,10 @@ public class Item {
 	this.price = price;
 	this.currentStock = 0;
 	this.totalSales = 0;
+    }
+    
+    public String toString() {
+    	return id + " " + currentStock + " " + price;
     }
 
     public String getID() {
@@ -64,6 +67,7 @@ public class Item {
 	return true;
 
     }
+    
 
     
 
