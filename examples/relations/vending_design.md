@@ -23,4 +23,12 @@ The item class also needs accessors for several values including:
 * `getCurrentStock` which returns the current stock of the item, an integer.
 * `getTotalSales` which returns the total sales of the items since the last time the the sales were reset, a decimal number.
 
+## Payment
+
+The playment class encapsulates how the vending machine receives payment. In this case, the user is simply prompted to enter a dollar amount which is then returned.
+
+The payment class only has one method:
+
+* `receivePayment` allows someone to enter payment. The user is prompted at the console to enter an amount which is parsed and returned. It returns the payment amount as a decimal number.
+
 
