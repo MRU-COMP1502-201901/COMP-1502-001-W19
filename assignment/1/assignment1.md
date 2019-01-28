@@ -1,6 +1,6 @@
 # Assignment 1 - Creating a Hockey Time Keeper's Database
 
-Over the course of the assginments in this course this semester we will construct a simple application that works as a hockey Time Keeper's database. For this first phase we will construct the basic components needed to keep track of hockey player data and allow the time keeper to record, shots, goals and power-play goals for each player on a team.
+Over the course of the assignments in this course this semester we will construct a simple application that works as a hockey Time Keeper's database. For this first phase we will construct the basic components needed to keep track of hockey player data and allow the time keeper to record, shots, goals and power-play goals for each player on a team.
 
 For the first phase, the time keeper should be able to load a list of players, add a new player, list the players' roster information and list the players' stats. The timer keeper should also be able to record a player's shot, a goal with one or two assists, and a power play goal, with one or two assists. 
 
@@ -25,7 +25,7 @@ For each player there are two types of information we want to keep, roster infor
 * number,
 * and position (left wing (LW), right wing (RW), centre (C), or defence (D).
 
-For simplicity's sake, assume that all of their roster information will be stored as strings (including birth date and height). You can use a String to encode their posisition or you can use an **enum**.
+For simplicity's sake, assume that all of their roster information will be stored as strings (including birth date and height). You can use a String to encode their possession or you can use an **enum**.
 
 Play information includes information about what they've done in the games they've played. This includes:
 
@@ -58,8 +58,8 @@ Your system needs to be able to save a list of players to a file and to be able 
 One approach would be to create a constructor that takes a file, then reads that file to populate a the list of players. An alternative would be to read in the list of players in the interface class and pass that list to the Player List class when it is created. (Both are acceptable, in your design document be sure to explain why you chose the approach you chose).
 
 An example player data [file](inferno.team) has been provided for you, it is roster and stats information taken from the Calgary Inferno, a team in the Canadian Women's Hockey League. 
-   * The data is taken from the CWHL [website](http://www.thecwhl.com/stats/player-stats/1/22?playertype=skater&position=skaters&rookie=no&sort=points&statstype=standard&page=1&league=1), which does not provide a breakdown of player's posiition, so we have provided some "artificial" positions for the forwards. Shots are also not recorded, so each player has been provided a roughly estimated number of shots.
-   * The data is comma seperated, with one field for each data item. You can use the following snippit of code to produce an ArrayList of each of the elements in one line 
+   * The data is taken from the CWHL [website](http://www.thecwhl.com/stats/player-stats/1/22?playertype=skater&position=skaters&rookie=no&sort=points&statstype=standard&page=1&league=1), which does not provide a breakdown of player's position, so we have provided some "artificial" positions for the forwards. Shots are also not recorded, so each player has been provided a roughly estimated number of shots.
+   * The data is comma separated, with one field for each data item. You can use the following snippit of code to produce an ArrayList of each of the elements in one line 
    ````
    ArrayList<String> data = 
     			new ArrayList<>(Arrays.asList(playerString.split(",")));
@@ -113,7 +113,7 @@ Your public interface descriptions should be written in plain english and should
 
 For the **implementation details**, for each class, you should describe what information will make up the state of an object (the instance variables) and how that information will be used. For each method you should include any information you need to about implementing the method. Again you should write your details in plain english, being as specific as possible. Someone reading your document should be able to understand enough to implement the whole class or any particular method.
 
-Your design document should be your guide testing and building your system. We expect that as you work you will build your system to reflect what you proposed in your design. However it is often the case that when workin on tests or development, you will discover something you did not consider when desiging. In these cases you are welcome to update your design document, along with a not regarding why you decided to make the change.
+Your design document should be your guide testing and building your system. We expect that as you work you will build your system to reflect what you proposed in your design. However it is often the case that when working on tests or development, you will discover something you did not consider when designing. In these cases you are welcome to update your design document, along with a not regarding why you decided to make the change.
 
 The Design Document will be marked with the following rubric:
 
@@ -138,7 +138,7 @@ The Design Document will be marked with the following rubric:
        * 6 marks - Provides a full description of the internal state of the class and for all methods there is a plan for implementation or an algorithm provided, but is missing 1 or 2 elements.
        * 4 marks - Provides a full description of the internal state of the class or provides a plan for implementation for each method, but is missing one or the other.
        * 2 marks - Provides a limited description of the internal state, but no description of implementation of the methods.
-       * 0 marks - No attempt to describe the implemenation.
+       * 0 marks - No attempt to describe the implementation.
 
 
  * **The Player List Class**
@@ -160,12 +160,12 @@ The Design Document will be marked with the following rubric:
        * 6 marks - Provides a full description of the internal state of the class and for all methods there is a plan for implementation or an algorithm provided, but is missing 1 or 2 elements.
        * 4 marks - Provides a full description of the internal state of the class or provides a plan for implementation for each method, but is missing one or the other.
        * 2 marks - Provides a limited description of the internal state, but no description of implementation of the methods.
-       * 0 marks - No attempt to describe the implemenation.
+       * 0 marks - No attempt to describe the implementation.
 
  * **The Document**
     * Readability
-       * 4 marks - The Design Document is written in clear, easy to read text, with very few gramaticial errors.
-       * 3 marks - The Design Document is written in clear, easy to read text, with several gramatical errors or other problems that limit readability.
+       * 4 marks - The Design Document is written in clear, easy to read text, with very few grammatical errors.
+       * 3 marks - The Design Document is written in clear, easy to read text, with several grammatical errors or other problems that limit readability.
        * 2 marks - The Design Document is not written in clear, easy to read text, but is sufficiently readable that it can be understood.
        * 1 mark - The Design Document is hard to read.
        * 0 marks - The Design Document is impossible to read.
@@ -218,7 +218,7 @@ The system will be marked according to the following rubric:
 
 * **System Functionality**
    * Main
-      * 8 marks - Able to Load and Save a Player List, able to add a Player, able to record, shots, goals (with asssits) and power play goals (with assists), able to list player roster and player stats. (Deductions possible for problems with functionality.)
+      * 8 marks - Able to Load and Save a Player List, able to add a Player, able to record, shots, goals (with assists) and power play goals (with assists), able to list player roster and player stats. (Deductions possible for problems with functionality.)
       * 6 marks - Missing one / two functions from the above.
       * 4 marks - Has at least two functions of the above.
       * 2 marks - Has one function, but missing most.
@@ -246,17 +246,17 @@ The system will be marked according to the following rubric:
    * Encapsulation
       * 4 marks - Functionality and data are will divided between the Player and Player List classes.
       * 3 marks - One or two instances of functionality or data in the wrong class.
-      * 2 marks - Functionality consistantly in the wrong class, to much state exposed to other classes.
-      * 1 mark - Functionality inconsistantly assigned to classes.
+      * 2 marks - Functionality consistently in the wrong class, to much state exposed to other classes.
+      * 1 mark - Functionality inconsistently assigned to classes.
       * 0 marks - No functionality assigned to any class.
    * Coding Style
-      * 4 marks - Code follows Java standard style, members (methods and instance variables) are well named, code is styled consistantly and is easy to read, with only minor issues.
+      * 4 marks - Code follows Java standard style, members (methods and instance variables) are well named, code is styled consistently and is easy to read, with only minor issues.
       * 3 marks - Code generally follows the above, but has one or two notable style issues.
       * 2 marks - Code has several issues in style.
       * 1 mark - Code is difficult to read and generally does not follow good style.
       * 0 marks - Code has no style.
    * Git Usage
-      * 4 marks - Each commit of code is small and logically consistant. 
+      * 4 marks - Each commit of code is small and logically consistent. 
       * 3 marks - Commits are larger or have several different changes grouped together.
       * 2 marks - Commits are large and occasional with many different changes grouped together.
       * 1 mark - One or two commits for the whole assignment.
