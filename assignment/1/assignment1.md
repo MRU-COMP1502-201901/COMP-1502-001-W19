@@ -8,9 +8,9 @@ For the first phase, the time keeper should be able to load a list of players, a
 
 For the first phase, you will be provided with code that will provide a menu for the time keeper and stubs of methods to tie together the menu with the code you will write.
 
-You will be responsible for creating a `Player` class to encapsulate a player and a `Player List` class to encapsulate a list of players, and for connecting those classes to the menu to provide the functionality.
+You will be responsible for creating a `Player` class to encapsulate a player and a `Player List` class to encapsulate a list of players, and for connecting those classes in the Menu class provide the functionality specified by each method stub in the menu class.
 
-Please remember to keep the [due dates](duedates.md) in mind.
+Please keep the [due dates](duedates.md) in mind.
 
 ## The Classes
 
@@ -78,9 +78,9 @@ An example player data [file](inferno.team) has been provided for you, it is ros
       * Shots
    * You are welcome to use this file format, or to adapt your own if you would like to record the information differently. Note that it is assumed that each field will not contain commas (so no comma after Calgary in Calgary AB) and will not contain any double quotes.
 
-### Interface
+### Menu
 
-In the interface class (Main) there are several stub methods provided, which will allow you to connect your code to the menu. In particular you will need to:
+In the menu class (Main) there are several stub methods provided, which will allow you to connect your code to the menu. In particular you will need to:
 
 * List all of the player's roster information
 * List all of the player's statistics information
@@ -97,19 +97,21 @@ The assignment is due in three parts. In the first part you will fill take the i
 
 Your design document needs to come in two parts, **1) The Public Interface** for the Player List and Player classes and the **2) Implementation Details** for both of those classes.
 
-For the public interface, for each class, you must describe provide a description including, what information the class is encapsulating, what the function of the class is, how the class interacts with other classes and what assumptions you've made regarding the design of the class.
+For the **public interface**, for each class, you must provide a description including, what information the class is encapsulating, what the function of the class is, how the class interacts with other classes and what assumptions you've made regarding the design of the class.
+
+The primary example for this is the [document](https://github.com/MRU-COMP1502-201901/COMP-1502-001-W19/blob/master/examples/relations/vending_design.md) we (Section 001) generated while planning our vending machine program. The other place that public interfaces are often found are in the JavaDoc documentation for a class. For example, Java's [String](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html), Java's [ArrayList](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) or JodaTime's [LocalDate](https://www.joda.org/joda-time/apidocs/index.html). 
 
 You also need to list the methods you will include in your classes. 
 
 For each method you must list:
 * a one sentence purpose describing what the method does, 
-* an indepth description of the method including the use of the method, any relevent algorithms or mathematics, any limitations of the method or assumptions about how the method will be able to work with other parts of your program
+* an description of the method including how to use of the method, any relevent algorithms or mathematics, any limitations of the method or assumptions about how the method will be able to work with other parts of your program
 * a list of the method's arguments with a description of what each argument means
 * a description of what the method returns
 
 Your public interface descriptions should be written in plain english and should allow a reader to quickly understand the purpose and use of each class and method. You can model your public interface for the other two classes on the document provided for the Interface class.
 
-For the implementation details, for each class, you should describe what information will make up the state of an object (the instance variables) and how that information will be used. For each method you should include any information you need to about implementing the method. Again you should write your details in plain english, being as specific as possible. Someone reading your document should be able to understand enough to implement the whole class or any particular method.
+For the **implementation details**, for each class, you should describe what information will make up the state of an object (the instance variables) and how that information will be used. For each method you should include any information you need to about implementing the method. Again you should write your details in plain english, being as specific as possible. Someone reading your document should be able to understand enough to implement the whole class or any particular method.
 
 Your design document should be your guide testing and building your system. We expect that as you work you will build your system to reflect what you proposed in your design. However it is often the case that when workin on tests or development, you will discover something you did not consider when desiging. In these cases you are welcome to update your design document, along with a not regarding why you decided to make the change.
 
@@ -125,10 +127,10 @@ The Design Document will be marked with the following rubric:
        * 1 marks - Provides a description of the class, with only limited description of the encapsulated information, detailed description of the role of the class and its interaction, or the assumptions made regarding the design of the class.
        * 0 marks - No attempt to describe the Player class.
     * The Method Descriptions
-       * 10 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, , and return values. If methods are left out (for any , this grade will be lowered by the same percentage.
-       * 8 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, , and return values, but is missing information from 1 or 2 methods.
-       * 6 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, , and return values, but is missing information from all methods.
-       * 4 marks - Provides some information regarding each method.
+       * 10 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, and return values.
+       * 8 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, and return values, but is missing information from 1 or 2 methods.
+       * 6 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, and return values, but is missing some information from all methods, or is missing several methods.
+       * 4 marks - Provides some information regarding each method, or provides information for only a few methods.
        * 2 marks - Provides a list of all methods.
        * 0 marks - No attempt to describe the methods of the Player class.
     * The Implementation Details
@@ -147,10 +149,10 @@ The Design Document will be marked with the following rubric:
        * 1 marks - Provides a description of the class, with only limited description of the encapsulated information, detailed description of the role of the class and its interaction, or the assumptions made regarding the design of the class.
        * 0 marks - No attempt to describe the Player class.
     * The Method Descriptions
-       * 10 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, , and return values. If methods are left out (for any , this grade will be lowered by the same percentage.
-       * 8 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, , and return values, but is missing information from 1 or 2 methods.
-       * 6 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, , and return values, but is missing information from all methods.
-       * 4 marks - Provides some information regarding each method.
+       * 10 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, and return values.
+       * 8 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, and return values, but is missing information from 1 or 2 methods.
+       * 6 marks - Provides detailed information for each method, including purpose, description with assumptions, arguments, and return values, but is missing some information from all methods, or is missing several methods.
+       * 4 marks - Provides some information regarding each method, or provides information for only a few methods.
        * 2 marks - Provides a list of all methods.
        * 0 marks - No attempt to describe the methods of the Player class.
     * The Implementation Details
@@ -188,8 +190,8 @@ You must also test your program to ensure that it works. In later assignments yo
       * Test recording Power Play assist. When an PP assist is recorded, the PP assists and points should both go up by one.
       * Test recording Power Play goal. When a PP goal is recorded, the PP goals, points and shots should both go up by one.
    * Shooting Percent
-      * Test recording a shot. When a shot is recorded, the shooting percentage should go down (but not below 0).
-      * Test recording a goal. When a goal is recorded, the shooting percentage should go up (but not above 100).
+      * Test recording a shot. When a shot is recorded, the shooting percentage should go down.
+      * Test recording a goal. When a goal is recorded, the shooting percentage should go up.
 * **Player List Class**
    * Adding a Player
       * Test adding a new player. After adding you should be able to get the player back using the player number.
@@ -228,7 +230,7 @@ The system will be marked according to the following rubric:
       * 2 marks - Has one function of the above.
       * 0 marks - No Player List functionality added.
    * Player
-      * 8 marks - Has at least 3 constructors, has getters for all needed values, has setters for appropriate values, able to calculage points, power play points and shooting percentage, able to record a shot, assist, goal (and power play assists and goals).
+      * 8 marks - Has at least 3 constructors, has getters for all needed values, has setters for appropriate values, able to calculate points, power play points and shooting percentage, able to record a shot, assist, goal (and power play assists and goals).
       * 6 marks - Missing one / two function from the above.
       * 4 marks - Has at least two of the functions above
       * 2 marks - Has one function of the above.
