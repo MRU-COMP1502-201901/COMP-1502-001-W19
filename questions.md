@@ -2,6 +2,13 @@
 
 Questions asked in class that we need to learn more about, or maybe that we want to remember.
 
+## Java
+* What's all this about enums?
+   * Now added as a repl.it for this week, with notes on blackboard.
+* What was that 2D ArrayList thing?
+   * We will revisit that in a couple of weeks.
+* What about static stuff?
+   * A topic we'll talk about soon.
 
 ## Git
 * How do we delete git if we need to?
