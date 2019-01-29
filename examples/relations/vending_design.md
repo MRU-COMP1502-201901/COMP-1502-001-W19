@@ -63,6 +63,7 @@ The item code, price, and maximum stock should be set when creating the new item
 * `purchase` - should subtract one from the on-hand stock (so long as that's above zero) and add the price to the total sales. If it's not able to take one from stock the method should return false, otherwise true.
 * `restock` - should add a new amount to the on-hand stock (so long as the *sum of the existing stock plus the new stock* is less than the maximum stock. If it's not able to add the new stock it should not change the amount on hand, and should return false, otherwise it should return true.
 * `resetSales` should reset the total sales to zero. 
+* `toString` should return a string of the information code, price and stock
 
 Each of the fields should have a getter method, that returns the value unaltered.
  
@@ -79,4 +80,16 @@ Each of the fields should have a getter method, that returns the value unaltered
 * A `Payment` system
 
 When the vending machine is created, it needs the payment system. The list of items should start empty, it will be added to by the addItem method.
+
+** Important Methods **
+* `addItem` takes an item and then tests if the item's id matches an item in the list of items already. If it doesn't match, then the item is added to the list.
+* `printAllItems` loops over all the items and prints them out using the item's toString.
+* `getItemInfo` takes an item id, and finds the item in the list of items. If it's there it prints out all of the item's information. If there's no match, then it prints the error.
+* `purchaseItem` takes an item id and finds the item in the list of items. It then prompts the payment system to find out what the payment is, if the payment is more than the item price, it calls the purchase method on it. If it fails for any reason, prints the problem to the console.
+* `restockItem` takes an item id and an amount and finds the item in the list of items. If the item is found it calls the restock method on the item. If it succeeds, it prints the status and if it does not it prints the error message.
+* `getTotalSales` loops over all of the items and adds up their sales and returns the value.
+* `resetSales` loops over all of the items and calls their reset Sales methods.
+
+
+
 
