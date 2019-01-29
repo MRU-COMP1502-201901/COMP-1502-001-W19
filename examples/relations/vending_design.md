@@ -39,7 +39,7 @@ The vending machine encapsulates the information and behaviour needed to simulat
 
 The methods needed for the vending machine are:
 * `addItem` adds a new item to the vending machine. If the item has a unique item code, compared to all other items currently in the vending machine the item is added, otherwise it is not added. The method returns true if the item could be added and false otherwise.
-* `listAllItems` lists all of the items in the vending machine to the console. Each item is printed with it's code price and stock, one per line.
+* `printAllItems` lists all of the items in the vending machine to the console. Each item is printed with it's code price and stock, one per line.
 * `getItemInfo` lists information about an item, including the code, price, current stock and maximum stock. This method takes an item code to look up, then finds that item and prints its relevant information.
 * `purchaseItem` allows an item to be purchased. This method takes an item code to look up, then finds that item and prints the price to the console, it then calls the payment object to take payment from the user. If the payment is sufficient then it attempts to purchase the item, if the item can be purchased then a message to that effect is printed to the console, otherwise an appropriate error message is printed.
 * `restockItem` allows an item to be restocked. This method takes an item code to look up and an amount to restock. It finds the appropriate item and attempts to restock it. It prints whether or not it succeeded to the console.
@@ -66,5 +66,13 @@ The item code, price, and maximum stock should be set when creating the new item
 
 Each of the fields should have a getter method, that returns the value unaltered.
  
+ ### Payment System Class
+ 
+ ### Vending Machine Class
+ 
+ The Vending Machine class needs to store:
+* A list of the `Items` in the vending machine.
+* A `Payment` system
 
+When the vending machine is created, it needs the payment system. The list of items should start empty, it will be added to by the addItem method.
 
