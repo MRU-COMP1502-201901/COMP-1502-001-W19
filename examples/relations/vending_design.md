@@ -6,7 +6,7 @@ This document outlines the design for a vending machine program which allows us 
 
 There are three important classes for the program. The first is the Vending Machine class which encapsulates the machine and provides the functionality of allowing a user to select an item and then pay for it and have it vended. The second is the item class which encapsulates the price and stock of an individual item within the machine, as well as the total sales of that item so far. The final class is the payment class which is responsible for managing asking the user to input money (which it does by simply asking them to type a dollar amount).
 
-Each of the three classes are expanded upon in the following sections, begining with the item and payment classes and ending with the vending machine class which takes advantage of them both.
+Each of the three classes are expanded upon in the following sections, beginning with the item and payment classes and ending with the vending machine class which takes advantage of them both.
 
 ### Item
 
@@ -27,7 +27,7 @@ The item class also needs accessors for several values including:
 
 ### Payment
 
-The playment class encapsulates how the vending machine receives payment. In this case, the user is simply prompted to enter a dollar amount which is then returned. The payment class doesn't need any new 
+The payment class encapsulates how the vending machine receives payment. In this case, the user is simply prompted to enter a dollar amount which is then returned. The payment class doesn't need any new 
 
 The payment class only has one method:
 
@@ -35,14 +35,14 @@ The payment class only has one method:
 
 ### VendingMachine
 
-The vending machine encapsulates the information and behaviour needed to simulate a vending machine. The class holds a list items and a payment system. It allows a user to query for the items, query for prices, and purchace an item. A new Vending Machine starts needs to be given a payment class object, and otherwise starts with no items.
+The vending machine encapsulates the information and behaviour needed to simulate a vending machine. The class holds a list items and a payment system. It allows a user to query for the items, query for prices, and purchase an item. A new Vending Machine starts needs to be given a payment class object, and otherwise starts with no items.
 
 The methods needed for the vending machine are:
-* `addItem` adds a new item to the vending machine. If the item has a unique item code, compaired to all other items currently in the vending machine the item is added, otherwise it is not added. The method returns true if the item could be added and false otherwise.
+* `addItem` adds a new item to the vending machine. If the item has a unique item code, compared to all other items currently in the vending machine the item is added, otherwise it is not added. The method returns true if the item could be added and false otherwise.
 * `listAllItems` lists all of the items in the vending machine to the console. Each item is printed with it's code price and stock, one per line.
-* `getItemInfo` lists information about an item, including the code, price, current stock and maximum stock. This method takes an item code to look up, then finds that item and prints its relevent information.
+* `getItemInfo` lists information about an item, including the code, price, current stock and maximum stock. This method takes an item code to look up, then finds that item and prints its relevant information.
 * `purchaseItem` allows an item to be purchased. This method takes an item code to look up, then finds that item and prints the price to the console, it then calls the payment object to take payment from the user. If the payment is sufficient then it attempts to purchase the item, if the item can be purchased then a message to that effect is printed to the console, otherwise an appropriate error message is printed.
-* `restockItem` allows an item to be restocked. This mathod takes an item code to look up and an amount to restock. It finds the appropriate item and attempts to restock it. It prints whether or not it succeeded to the console.
+* `restockItem` allows an item to be restocked. This method takes an item code to look up and an amount to restock. It finds the appropriate item and attempts to restock it. It prints whether or not it succeeded to the console.
 * `getTotalSales` returns the total sales for the vending machine. It adds together the total sales of each item in the machine and returns the number as a double.
 * `resetSales` resets the sales of all of the items in the machine. For each item it resets the sales, so the next time `getTotalSales` is called it will return all sales after this point.
 
@@ -57,7 +57,7 @@ The item class needs to store:
 * A maximum stock - int
 * A total sales - double
 
-The item code, price, and maximum stock should be set when creating the new item. The on-hand stock should be increased by the `restock` method (upto, but not over the maximum stock) and should be decremented by the `purchase` method. 
+The item code, price, and maximum stock should be set when creating the new item. The on-hand stock should be increased by the `restock` method (up to, but not over the maximum stock) and should be decremented by the `purchase` method. 
 
 **Important Methods**
 * `purchase` - should subtract one from the on-hand stock (so long as that's above zero) and add the price to the total sales. If it's not able to take one from stock the method should return false, otherwise true.
