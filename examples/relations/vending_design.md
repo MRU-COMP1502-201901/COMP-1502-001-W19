@@ -68,6 +68,10 @@ Each of the fields should have a getter method, that returns the value unaltered
  
  ### Payment System Class
  
+ The payment system class doesn't need any instance variables (in this iteration of the design).
+ 
+ The `receive payment` method will prompt the console for the user to enter a dollar amount "xx.xx" format. If the value received is formatted correctly to be parsed as a double, then that double will be returned or the user will be prompted again.
+ 
  ### Vending Machine Class
  
  The Vending Machine class needs to store:
