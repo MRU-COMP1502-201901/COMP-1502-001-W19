@@ -57,8 +57,14 @@ The item class needs to store:
 * A maximum stock - int
 * A total sales - double
 
-The item code, price, and maximum stock should be set when creating the new item. The on-hand stock should be increased by the `restock` method (upto, but not over the maximum stock) and should be decremented by the `purchase` method.
+The item code, price, and maximum stock should be set when creating the new item. The on-hand stock should be increased by the `restock` method (upto, but not over the maximum stock) and should be decremented by the `purchase` method. 
 
+**Important Methods**
+* `purchase` - should subtract one from the on-hand stock (so long as that's above zero) and add the price to the total sales. If it's not able to take one from stock the method should return false, otherwise true.
+* `restock` - should add a new amount to the on-hand stock (so long as the *sum of the existing stock plus the new stock* is less than the maximum stock. If it's not able to add the new stock it should not change the amount on hand, and should return false, otherwise it should return true.
+* `resetSales` should reset the total sales to zero. 
 
+Each of the fields should have a getter method, that returns the value unaltered.
+ 
 
 
