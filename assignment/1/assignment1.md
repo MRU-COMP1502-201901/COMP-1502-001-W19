@@ -34,7 +34,7 @@ Play information includes information about what they've done in the games they'
 * assists,
 * power play points (power play goals and assists together),
 * power play goals,
-* power play points,
+* power play assists,
 * shots,
 * and shooting percentage (for all of their shots what percent are goals?).
 
