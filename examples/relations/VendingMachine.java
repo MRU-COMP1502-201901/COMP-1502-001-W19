@@ -123,6 +123,11 @@ public class VendingMachine {
 		
 		System.out.println("Total sales: " + vending.getTotalSales());
 		
+		vending.resetSales();
+		
+		System.out.println("Total sales After Reset: " 
+		+ vending.getTotalSales());
+		
 	}
 	
 }
