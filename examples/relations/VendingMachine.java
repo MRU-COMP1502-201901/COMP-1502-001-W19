@@ -33,16 +33,18 @@ public class VendingMachine {
 	}
 	
 	public void showItemInfo(String itemID) {
+		System.out.println("Item:");
 		for (Item i: items) {
 			if (i.getID().equalsIgnoreCase(itemID)) {
-				System.out.println("ID: " + i.getID());
-				System.out.println("Price: " + i.getPrice());
-				System.out.println("Current Stock: " + i.getStock());
-				System.out.println("Maximum Stock: " + i.getMaxStock());
-				System.out.println("Total Sales: " + i.getTotalSales());
-				
+				System.out.println("\tID: " + i.getID());
+				System.out.println("\tPrice: " + i.getPrice());
+				System.out.println("\tCurrent Stock: " + i.getStock());
+				System.out.println("\tMaximum Stock: " + i.getMaxStock());
+				System.out.println("\tTotal Sales: " + i.getTotalSales());
+				return;
 			}
 		}
+		System.out.println("Unable to find item");
 	}
 	
 	public void purchaseItem(String itemID) {
@@ -66,6 +68,20 @@ public class VendingMachine {
 		
 	}
 	
+	public void restockItem(String itemID, int restockAmount) {
+		for (Item i: items) {
+			if (i.getID().equalsIgnoreCase(itemID)) {
+				System.out.println("Restocking " + i.getID());
+				if (i.restock(restockAmount)) {
+					System.out.println("Current Stock Now: " + i.getStock());
+				} else {
+					System.out.println("Not able to restock, not enough space.");
+				}
+			}
+		}
+		System.out.println("Unable to find item.");
+	}
+	
 	public static void main(String[] args) {
 	
 		VendingMachine vending = 
@@ -73,7 +89,12 @@ public class VendingMachine {
 		vending.addItem(new Item("A", 10, 1.00));
 		vending.addItem(new Item("A", 10, 1.00));
 		vending.addItem(new Item("B", 10, 1.50));
+		
+		
+		
 		vending.listAllItems();
+		
+		vending.showItemInfo("A");
 		
 	}
 	
