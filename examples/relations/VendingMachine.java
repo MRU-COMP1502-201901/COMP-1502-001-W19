@@ -59,6 +59,8 @@ public class VendingMachine {
 					} else {
 						System.out.println("Out of stock");
 					}
+				} else {
+					System.out.println("Insufficient payment");
 				}
 				return;
 			} 
@@ -77,9 +79,18 @@ public class VendingMachine {
 				} else {
 					System.out.println("Not able to restock, not enough space.");
 				}
+				return;
 			}
 		}
 		System.out.println("Unable to find item.");
+	}
+	
+	public double getTotalSales() {
+		double sales = 0;
+		for (Item i: items) {
+			sales += i.getTotalSales();
+		}
+		return sales;
 	}
 	
 	public static void main(String[] args) {
@@ -94,7 +105,15 @@ public class VendingMachine {
 		
 		vending.listAllItems();
 		
+		
+		
 		vending.showItemInfo("A");
+		
+		vending.restockItem("A", 5);
+		
+		vending.purchaseItem("A");
+		
+		System.out.println("Total sales: " + vending.getTotalSales());
 		
 	}
 	
