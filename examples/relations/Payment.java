@@ -1,9 +1,18 @@
+import java.util.Scanner;
 
 public class Payment {
 
 	public double receivePayment() {
 		
-		return 0.0;
+		double payment = 0.00;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Please enter payment");
+		payment = s.nextDouble();
+		
+		return payment;
+		
+		
+		
 	}
 	
 }
