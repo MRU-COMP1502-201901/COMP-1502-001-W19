@@ -33,21 +33,7 @@ public class VendingMachine {
 	}
 	
 	public static void main(String[] args) {
-		
-//		ArrayList<Integer> ints = new ArrayList<>();
-//		ints.add(1);
-//		ints.add(2);
-//		ints.add(4);
-//		ints.add(8);
-//		
-//		for (int i = 0; i < ints.size(); i++) {
-//			System.out.println(ints.get(i));
-//		}
-//		
-//		for (Integer i : ints) {
-//			System.out.println(i);
-//		}
-//		
+	
 		VendingMachine vending = 
 				new VendingMachine(new Payment());
 		vending.addItem(new Item("A", 10, 1.00));
