@@ -32,6 +32,40 @@ public class VendingMachine {
 		
 	}
 	
+	public void showItemInfo(String itemID) {
+		for (Item i: items) {
+			if (i.getID().equalsIgnoreCase(itemID)) {
+				System.out.println("ID: " + i.getID());
+				System.out.println("Price: " + i.getPrice());
+				System.out.println("Current Stock: " + i.getStock());
+				System.out.println("Maximum Stock: " + i.getMaxStock());
+				System.out.println("Total Sales: " + i.getTotalSales());
+				
+			}
+		}
+	}
+	
+	public void purchaseItem(String itemID) {
+		
+		for (Item i: items) {
+			if (i.getID().equalsIgnoreCase(itemID)) {
+				System.out.println(i.getID() + " " + i.getPrice());
+				if (payment.receivePayment() >= i.getPrice()) {
+					System.out.println("Vending...");
+					if (i.buyItem()) {
+						System.out.println("Enjoy");
+					} else {
+						System.out.println("Out of stock");
+					}
+				}
+				return;
+			} 
+		}
+		
+		System.out.println("Unable to find item.");
+		
+	}
+	
 	public static void main(String[] args) {
 	
 		VendingMachine vending = 
