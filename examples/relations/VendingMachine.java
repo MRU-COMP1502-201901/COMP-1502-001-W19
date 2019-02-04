@@ -9,7 +9,7 @@ public class VendingMachine {
 	public VendingMachine(Payment payment) {
 		this.payment = payment;
 		items = new ArrayList<>();
-		String s = new String("Hello!");
+		
 	}
 	
 	public boolean addItem(Item item) {
