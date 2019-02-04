@@ -39,6 +39,10 @@ public class Item {
 
 		return this.totalSales;
 	}
+	
+	public void resetSales() {
+		this.totalSales = 0;
+	}
 
 	public boolean restock(int newItems) {
 		boolean returnValue = true;
