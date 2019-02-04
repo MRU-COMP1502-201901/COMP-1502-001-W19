@@ -93,6 +93,14 @@ public class VendingMachine {
 		return sales;
 	}
 	
+	public void resetSales() {
+		
+		for (Item i: items) {
+			i.resetSales();
+		}
+	
+	}
+	
 	public static void main(String[] args) {
 	
 		VendingMachine vending = 
