@@ -24,6 +24,10 @@ public class VendingMachine {
 		return true;
 	}
 	
+	protected ArrayList<Item> getItems() {
+		return items;
+	}
+	
 	public void listAllItems() {
 		
 		for (Item i : items) {
