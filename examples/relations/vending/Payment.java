@@ -1,3 +1,4 @@
+package vending;
 import java.util.Scanner;
 
 public class Payment {
