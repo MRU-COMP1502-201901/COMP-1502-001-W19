@@ -1,44 +1,40 @@
+package library;
+
 import java.util.ArrayList;
 
-// base class or super class or parent class
-public class LibraryItem {
+public class Main {
 
-	// inheritance allows us to create LibraryItems
-	// but extend them with particular details for
-	// LibraryBook or LibraryTape 
-	
-	int idNumber;
-	int yearOfRelease;
-	String title;
-	
-	public int getIdNumber() {
-		return idNumber;
-	}
-	public int getYearOfRelease() {
-		return yearOfRelease;
-	}
-	public String getTitle() {
-		return title;
-	}
-	
-	// constructor for all the things important to a LibraryItem
-	public LibraryItem(
-			int idNumber, 
-			int yearOfRelease, 
-			String title) {
-		
-		this.idNumber = idNumber;
-		this.yearOfRelease = yearOfRelease;
-		this.title = title;
-	}
-	
-	// Method in LibraryItem, but usable by the subclasses
-	public String toString() {
-		return idNumber + " " + title + " " + yearOfRelease;
-	}
-	
 	public static void main(String[] args) {
+		badMain();
 		
+		goodMain();
+
+	}
+	
+	public static void badMain() {
+		// two examples using Bad Library Item, where we have to include
+		// irrelevent or weird information
+		BadLibraryItem i = new BadLibraryItem("Ender's Game", 
+				1, 
+				"Card", 
+				120, 
+				-1, 
+				-1, 
+				"It's a book?");
+		System.out.println(i);
+		BadLibraryItem aTape = new BadLibraryItem(
+				"Into the SpiderVerse", 
+				2, 
+				"A bunch of people", 
+				-1, 
+				45, 
+				-1, 
+				"It's a tape, so walkman?");
+		System.out.println(aTape);
+		
+	}
+	
+	public static void goodMain() {
 		// We can create a LibraryItem, which only has
 		// the shared aspects and none of subclass aspects
 		LibraryItem i = new LibraryItem(1, 2008, "An item");
@@ -78,7 +74,9 @@ public class LibraryItem {
 		// see the LibraryItem parts of the object. 
 		/*System.out.println(tapeItem.getLength());*/
 		
-		// polymorphism 
+		// polymorphism allows us to handle different 
+		// subclass instances as instances of the superclass
+		// which can be very useful
 		ArrayList<LibraryItem> items = new ArrayList<>();
 		items.add(book);
 		items.add(tape);
@@ -86,7 +84,5 @@ public class LibraryItem {
 			System.out.println(item);
 		}
 	}
-	
-	
-	
+
 }
