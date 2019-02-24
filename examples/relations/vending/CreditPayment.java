@@ -8,7 +8,6 @@ public class CreditPayment extends Payment {
 	
 	@Override
 	public double receivePayment() {
-		//
 		double payment = 0.00;
 		
 		System.out.println("Please enter payment");
