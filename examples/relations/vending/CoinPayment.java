@@ -16,15 +16,21 @@ public class CoinPayment extends Payment {
 		coinCount = kb.nextInt();
 		payment += coinCount * 0.25;
 		
+		System.out.println("Payment is " + payment);
+		
 		System.out.print("# of loonies? ");
 		coinCount = kb.nextInt();
 		payment += coinCount;
+		
+		System.out.println("Payment is " + payment);
 		
 		System.out.print("# of twoonies? ");
 		coinCount = kb.nextInt();
 		payment += coinCount * 2;
 		
-		return 0;
+		System.out.println("Payment is " + payment);
+		
+		return payment;
 	}
 
 }
