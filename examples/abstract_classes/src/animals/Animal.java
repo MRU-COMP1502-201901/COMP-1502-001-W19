@@ -1,10 +1,11 @@
 package animals;
 
-public class Animal {
+public abstract class Animal {
 	
-	public String speak() {
-		return "I don't know what sound an animal makes";
+	public abstract String speak();
+
+	public String move(int x) {
+		return "This animal moved " + x;
 	}
-
-
+	
 }
