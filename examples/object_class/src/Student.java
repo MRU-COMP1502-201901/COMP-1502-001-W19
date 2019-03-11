@@ -1,10 +1,15 @@
 
-public class Student extends Person {
+public class Student extends Person implements Cloneable   {
 
 	private String name;
 	
 	public Student(String name) {
 		this.name = name;
+	}
+	
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return super.clone();
 	}
 	
 	public String getName() {

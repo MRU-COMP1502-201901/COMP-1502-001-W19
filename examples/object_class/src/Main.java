@@ -1,7 +1,7 @@
 
 public class Main {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 		
 		int number = 17;
 		System.out.println(number);
@@ -40,6 +40,7 @@ public class Main {
 		System.out.println(s1.equals(s3));
 		System.out.println(s2.equals(s3));
 		
+		s2.clone();
 		
 	}
 
