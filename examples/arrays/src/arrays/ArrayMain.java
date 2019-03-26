@@ -1,13 +1,12 @@
 package arrays;
 
-import com.sun.org.apache.xml.internal.utils.StylesheetPIHandler;
 
 public class ArrayMain {
 
 	public static void main(String[] args) {
 		 
 		int[] intArray;
-		intArray = new int[5000000000000000];
+		intArray = new int[50];
 //		intArray = new int[1];
 //		intArray = new int[10000];
 		
@@ -17,12 +16,15 @@ public class ArrayMain {
 
 		//System.out.println(intArray[-1]);
 		
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < intArray.length; i++) {
+			// always use array.length to ensure that you don't
+			// write past the end of the array
 			intArray[i] = i * 5;
 		}
 		
 		intArray = new int[25];
 		for (int i = 0; i < intArray.length; i++) {
+
 			System.out.println(intArray[i]);
 		}
 		int[] biggerArray = new int[20];
