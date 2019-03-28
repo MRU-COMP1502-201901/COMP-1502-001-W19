@@ -8,9 +8,13 @@ We will be refining your hockey time keeper's database. For this third phase we 
 * start the program with file name as an optional argument (no longer just prompting user for filename),
 * players are considered unique based on their jersey number,
 * sort players by a natural ordering of of jersey number for RosterTable printing,
+* * lower jersey number first
 * sort skaters by points, then goals, then assists (then their natural ordering) for the Skater stats in SkaterStatsTable,
+* * higher points first, higher goals second, higher assists third, then lower jersey number
 * sort goalies by SV% (then their natural ordering) for Goalie stats in GoalieStatsTable,
+* * higher SV% first, then lower jersey number
 * print out players collected by which hometown they are from with the players sorted by name (then their natural ordering) in HometownTable.
+* * alphabetical name, then lower jersey number
 
 ### Interfaces
 
