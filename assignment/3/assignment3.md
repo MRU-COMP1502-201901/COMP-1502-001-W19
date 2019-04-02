@@ -8,9 +8,13 @@ We will be refining your hockey time keeper's database. For this third phase we 
 * start the program with file name as an optional argument (no longer just prompting user for filename),
 * players are considered unique based on their jersey number,
 * sort players by a natural ordering of of jersey number for RosterTable printing,
+* * lower jersey number first
 * sort skaters by points, then goals, then assists (then their natural ordering) for the Skater stats in SkaterStatsTable,
+* * higher points first, higher goals second, higher assists third, then lower jersey number
 * sort goalies by SV% (then their natural ordering) for Goalie stats in GoalieStatsTable,
+* * higher SV% first, then lower jersey number
 * print out players collected by which hometown they are from with the players sorted by name (then their natural ordering) in HometownTable.
+* * alphabetical name, then lower jersey number
 
 ### Interfaces
 
@@ -32,7 +36,7 @@ The system should not throw an exception if there are IO problems. If IO excepti
 
 Again we will provide you with starter files. The **Main.java** file that is already designed to take in menu choices, but has unfilled dummy functions, that you need to complete. It will be your job to complete the changes requested in this assignment and complete these dummy functions again.
 
-[This file](assignment3_demo.md) is a demonstration of the function of the program.
+[This file](assignment3_demo.txt) is a demonstration of the function of the program.
 
 You will be given dummy classes of **Main**, **Player**, **Goalie**, **Skater**, **PlayerList**, **TeamReader**, **TeamWriter**, and **TableFactory**. You will have to re-implement **Table** as an interface and use it to create your, **RosterTable**, **SkaterStatTable**, and **GoalieStatTable** used by **TableFactory**. You will need to add an equals, hashCode, and implement Comparable<Player> for the Player class. You will also need to create 3 Comparators (for Player, Skater, Goalie) to be used in their corresponding Tables. You will need to make a new **HometownTable** for the new table type required.
 
